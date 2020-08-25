@@ -1,0 +1,10 @@
+#request field
+
+int64 x
+int64 y
+
+---
+
+#response field
+
+int64 sum

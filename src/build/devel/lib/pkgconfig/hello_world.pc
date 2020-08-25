@@ -1,0 +1,8 @@
+prefix=/home/intellimath/catkin_ws/src/build/devel
+
+Name: hello_world
+Description: Description of hello_world
+Version: 0.0.0
+Cflags: -I/home/intellimath/catkin_ws/src/build/devel/include
+Libs: -L${prefix}/lib 
+Requires: 
