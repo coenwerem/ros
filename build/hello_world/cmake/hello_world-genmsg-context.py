@@ -1,6 +1,6 @@
 # generated from genmsg/cmake/pkg-genmsg.context.in
 
-messages_str = "/home/intellimath/catkin_ws/src/hello_world/msg/HelloRos.msg;/home/intellimath/catkin_ws/src/hello_world/msg/SensorData.msg"
+messages_str = "/home/intellimath/catkin_ws/src/hello_world/msg/HelloRos.msg;/home/intellimath/catkin_ws/src/hello_world/msg/SensorData.msg;/home/intellimath/catkin_ws/src/hello_world/msg/ultRangerData.msg;/home/intellimath/catkin_ws/src/hello_world/msg/motorDriver.msg"
 services_str = "/home/intellimath/catkin_ws/src/hello_world/srv/addTwoNumbers.srv"
 pkg_name = "hello_world"
 dependencies_str = "std_msgs"

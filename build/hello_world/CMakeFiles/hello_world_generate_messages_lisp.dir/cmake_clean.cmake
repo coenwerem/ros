@@ -1,6 +1,8 @@
 file(REMOVE_RECURSE
   "CMakeFiles/hello_world_generate_messages_lisp"
+  "/home/intellimath/catkin_ws/devel/share/common-lisp/ros/hello_world/msg/motorDriver.lisp"
   "/home/intellimath/catkin_ws/devel/share/common-lisp/ros/hello_world/msg/HelloRos.lisp"
+  "/home/intellimath/catkin_ws/devel/share/common-lisp/ros/hello_world/msg/ultRangerData.lisp"
   "/home/intellimath/catkin_ws/devel/share/common-lisp/ros/hello_world/msg/SensorData.lisp"
   "/home/intellimath/catkin_ws/devel/share/common-lisp/ros/hello_world/srv/addTwoNumbers.lisp"
 )

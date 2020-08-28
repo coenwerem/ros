@@ -41,6 +41,8 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/hello_world/msg" TYPE FILE FILES
     "/home/intellimath/catkin_ws/src/hello_world/msg/HelloRos.msg"
     "/home/intellimath/catkin_ws/src/hello_world/msg/SensorData.msg"
+    "/home/intellimath/catkin_ws/src/hello_world/msg/ultRangerData.msg"
+    "/home/intellimath/catkin_ws/src/hello_world/msg/motorDriver.msg"
     )
 endif()
 

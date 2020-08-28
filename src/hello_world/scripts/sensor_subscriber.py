@@ -17,11 +17,11 @@ def callback(data):
 
 def receiveDistance():
 
-    	rospy.init_node('controller', anonymous=True)
+    rospy.init_node('controller', anonymous=True)
     	
 	rospy.Subscriber("distance", SensorData, callback)
 
-    	rospy.spin()  #This keeps Python form exiting until the node is stopped
+    rospy.spin()  #This keeps Python form exiting until the node is stopped
 
 if __name__=="__main__":
 

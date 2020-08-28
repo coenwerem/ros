@@ -2,4 +2,4 @@
 source_root_dir = '/home/intellimath/catkin_ws/src'
 whitelisted_packages = ''.split(';') if '' != '' else []
 blacklisted_packages = ''.split(';') if '' != '' else []
-underlay_workspaces = '/home/intellimath/catkin_ws/devel;/opt/ros/melodic'.split(';') if '/home/intellimath/catkin_ws/devel;/opt/ros/melodic' != '' else []
+underlay_workspaces = '/home/intellimath/rain_ws/devel;/home/intellimath/catkin_ws/devel;/opt/ros/melodic'.split(';') if '/home/intellimath/rain_ws/devel;/home/intellimath/catkin_ws/devel;/opt/ros/melodic' != '' else []

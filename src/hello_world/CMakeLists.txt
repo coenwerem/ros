@@ -51,6 +51,8 @@ add_message_files(
     FILES
     HelloRos.msg
     SensorData.msg
+    ultRangerData.msg
+    motorDriver.msg
 )
 
 ## Generate services in the 'srv' folder
