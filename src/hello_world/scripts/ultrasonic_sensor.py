@@ -7,13 +7,12 @@ import time
 
 from hello_world.msg import ultRangerData
 
-GPIO.setmode(GPIO.BOARD)
+GPIO.setmode(GPIO.BCM)
 
 sensorDetails = ultRangerData()
 
 sensorDetails.TRIG = 18
 sensorDetails.ECHO = 23
-GPIO.cleanup()
 
 GPIO.setup(sensorDetails.TRIG, GPIO.OUT)
 GPIO.setup(sensorDetails.ECHO, GPIO.IN)
@@ -39,13 +38,13 @@ def calcDistance():
 
     while not rospy.is_shutdown():
 
-        distance = pulse_duration * 17150
-        distance = round(distance+1.15, 2)
-        time.sleep(2)
+        dist = pulse_duration * 17150
+        sensorDetails.distance=dist
+	time.sleep(2)
 
-        success_str = "Distance recorded and published."
+        success_str = "Distance recorded and published: %f" %dist
         rospy.loginfo(success_str)
-        pub.publish(distance)
+        pub.publish(sensorDetails)
         rate.sleep()
 
 
@@ -55,5 +54,5 @@ if __name__ == "__main__":
             calcDistance()
 
     except rospy.ROSInterruptException:
-       
+        GPIO.cleanup()
         pass

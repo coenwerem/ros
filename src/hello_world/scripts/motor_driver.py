@@ -8,7 +8,7 @@ import time
 from hello_world.msg import ultRangerData
 from hello_world.msg import motorDriver
 
-GPIO.setmode(GPIO.BOARD)
+GPIO.setmode(GPIO.BCM)
 
 driverDetails = motorDriver()
 
@@ -19,7 +19,11 @@ driverDetails.dir2 = 6
 driverDetails.dir3 = 24
 driverDetails.dir4 = 25
 
-GPIO.output(driverDetails.ENABLE_B, True)
+#GPIO.setup(driverDetails.ENABLE_B, GPIO.OUT)
+GPIO.setup(driverDetails.dir3, GPIO.OUT)
+GPIO.setup(driverDetails.dir4, GPIO.OUT)
+
+#GPIO.output(driverDetails.ENABLE_B, True)
 
 def forward():
     GPIO.output(driverDetails.dir3, True)
@@ -38,13 +42,13 @@ def stop():
 def callback(data):
 
     if data.distance <= 20:
-        rospy.loginfo(rospy.get_caller_id() + " Distance measured = %s", data.distance, "cm")
+        rospy.loginfo(data.distance)
         backward()
         #time.sleep(3)
         #stop()
 
     else:
-        rospy.loginfo(rospy.get_caller_id() + " Distance measured = %s", data.distance, "cm")
+        rospy.loginfo(data.distance)
         forward()
         #time.sleep(3)
         #stop()
