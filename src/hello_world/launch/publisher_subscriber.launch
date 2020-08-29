@@ -1,6 +1,6 @@
 <launch>
 
-<node pkg= "hello_world" name = "Publisher" type = "publisher.py" output="screen"/>
+<node pkg= "hello_world" name = "Publisher" type = "publisher.py"/>
 <node pkg= "hello_world" name = "Subscriber" type = "subscriber.py" output="screen"/>
 
 </launch>
